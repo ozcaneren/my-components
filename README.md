@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# UI Components Library
 
-## Getting Started
+Modern ve özelleştirilebilir React component kütüphanesi.
 
-First, run the development server:
+## 🧩 Komponentler
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### 📝 Input
+Modern ve özelleştirilebilir input komponenti.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Özellikler:**
+- ✨ Çeşitli varyantlar (default, outline, ghost)
+- 📏 Farklı boyutlar (sm, md, lg)
+- 🎨 İkon desteği (sol ve sağ)
+- 🏷️ Label ve error mesaj desteği
+- 🎯 Tema uyumlu tasarım
+- ♿ Erişilebilirlik standartlarına uygun
+- 🎨 Tam özelleştirilebilir yapı
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 🔽 Select
+Gelişmiş özelliklerle donatılmış select komponenti.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Özellikler:**
+- 🎨 Tamamen özelleştirilebilir görünüm
+- 🔍 Arama özelliği
+- ⌨️ Klavye navigasyonu
+- 🎯 Dışarı tıklandığında otomatik kapanma
+- 📊 Z-index kontrolü
+- ✅ Seçili option görsel belirteci
+- 💭 Placeholder desteği
+- 🔄 Controlled ve uncontrolled kullanım
 
-## Learn More
+### 📄 Textarea
+Esnek ve kullanışlı textarea komponenti.
 
-To learn more about Next.js, take a look at the following resources:
+**Özellikler:**
+- ✨ Çeşitli varyantlar
+- 📏 Farklı boyutlar
+- ↕️ Dikey yeniden boyutlandırma
+- 🎨 Tema uyumlu tasarım
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 🔘 Button
+Modern ve çok yönlü button komponenti.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Özellikler:**
+- ✨ Çeşitli varyantlar (primary, secondary, outline, ghost)
+- 📏 Farklı boyutlar (sm, md, lg)
+- 🎨 İkon desteği
+- ♿ Erişilebilirlik standartlarına uygun
 
-## Deploy on Vercel
+### ⏳ Loading
+Esnek ve özelleştirilebilir loading komponenti.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Özellikler:**
+- ✨ Çeşitli varyantlar
+- 📏 Farklı boyutlar
+- 🔄 Animasyon çeşitleri
+- 🎨 Tema uyumlu tasarım
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🎨 Tema Desteği
+
+- 🌓 Light/Dark mod desteği
+- 🎨 Özelleştirilebilir renk paleti
+- 📱 Responsive tasarım
+
+## 🛠️ Kullanım
+
+Her komponentin kendi sayfasında detaylı kullanım örnekleri ve kod parçacıkları bulunmaktadır.
+
+## 📚 Dokümantasyon
+
+Detaylı dokümantasyon için ilgili komponent sayfalarını ziyaret edin:
+- [Input](/input)
+- [Select](/select)
+- [Textarea](/textarea)
+- [Button](/button)
+- [Loading](/loading)
