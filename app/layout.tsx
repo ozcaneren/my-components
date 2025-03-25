@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import Sidebar from "@/components/Sidebar";
+import Navbar from "@/components/Vaul";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
         <ThemeProvider>
           <div className="flex flex-col md:flex-row min-h-screen bg-background">
             <Sidebar />
+            <Navbar />
             <div className="flex-1 w-full px-4 py-8 md:px-8 md:pl-72 xl:pl-96">
               {children}
             </div>
