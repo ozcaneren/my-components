@@ -1,11 +1,20 @@
+"use client";
+
+import * as React from "react";
+import Link from "next/link";
 import { Button } from "@/components/Button";
 import { Input } from "@/components/Input";
 import { Loading } from "@/components/Loading";
-import Link from "next/link";
+import Select from "@/components/Select";
+import { DateTimePicker } from "@/components/DateTimePicker";
+import { Breadcrumb } from "@/components/Breadcrumb";
 import { FaGithub, FaEnvelope } from "react-icons/fa6";
 import { TbComponents } from "react-icons/tb";
+import { HomeIcon, PackageIcon, ZapIcon } from "lucide-react";
 
 export default function Home() {
+  const [date, setDate] = React.useState<Date>();
+
   return (
     <div className="min-h-screen w-full py-8">
       <div className="max-w-5xl mx-auto flex flex-col">
@@ -22,14 +31,16 @@ export default function Home() {
           <p className="text-xl text-muted-foreground mb-8">
             Özelleştirilebilir, erişilebilir ve tema uyumlu React komponentleri
           </p>
-          <div className="flex gap-4 justify-center">
+          <div className="flex gap-2 md:gap-4 justify-center">
             <Link href="/input">
-              <Button sizeVariant="lg">
-                Komponentleri Keşfet
-              </Button>
+              <Button sizeVariant="md">Komponentleri Keşfet</Button>
             </Link>
             <Link href="https://github.com/ozcaneren">
-              <Button sizeVariant="lg" variant="secondary" leftIcon={<FaGithub size={16} />}>
+              <Button
+                sizeVariant="md"
+                variant="secondary"
+                leftIcon={<FaGithub size={16} />}
+              >
                 GitHub
               </Button>
             </Link>
@@ -41,7 +52,12 @@ export default function Home() {
           <FeatureCard
             title="Input"
             description="İkon desteği, farklı boyutlar ve varyantlar ile modern input komponenti"
-            preview={<Input placeholder="örnek@email.com" leftIcon={<FaEnvelope size={16} />} />}
+            preview={
+              <Input
+                placeholder="örnek@email.com"
+                leftIcon={<FaEnvelope size={16} />}
+              />
+            }
             href="/input"
           />
           <FeatureCard
@@ -50,7 +66,9 @@ export default function Home() {
             preview={
               <div className="flex gap-2">
                 <Button sizeVariant="md">Button</Button>
-                <Button sizeVariant="md" variant="destructive">Button</Button>
+                <Button sizeVariant="md" variant="destructive">
+                  Button
+                </Button>
               </div>
             }
             href="/button"
@@ -68,6 +86,51 @@ export default function Home() {
             }
             href="/loading"
           />
+          <FeatureCard
+            title="Select"
+            description="Seçim yapılabilen select komponenti"
+            preview={<Select options={[]} placeholder="Seçiniz" />}
+            href="/select"
+          />
+          <FeatureCard
+            title="Date & Time Picker"
+            description="Tarih ve saat seçimi için modern ve kullanışlı komponent"
+            preview={
+              <div className="w-full">
+                <DateTimePicker
+                  value={date}
+                  onChange={(newDate) => setDate(newDate)}
+                />
+              </div>
+            }
+            href="/datetimepicker"
+          />
+          <FeatureCard
+            title="Breadcrumb"
+            description="Özelleştirilebilir ayraçlar ve ikonlar ile breadcrumb komponenti"
+            preview={
+              <Breadcrumb
+                items={[
+                  {
+                    label: "A",
+                    href: "/",
+                    icon: <HomeIcon className="h-4 w-4" />,
+                  },
+                  {
+                    label: "B",
+                    href: "/products",
+                    icon: <PackageIcon className="h-4 w-4" />,
+                  },
+                  {
+                    label: "C",
+                    icon: <ZapIcon className="h-4 w-4" />,
+                  },
+                ]}
+                showIcons={true}
+              />
+            }
+            href="/breadcrumb"
+          />
         </div>
 
         {/* Features List */}
@@ -78,6 +141,7 @@ export default function Home() {
               "Tailwind CSS ile stillendirilmiş",
               "Light/Dark tema desteği",
               "Responsive tasarım",
+              "Modern ve minimalist UI",
             ]}
           />
           <FeatureList
@@ -86,6 +150,7 @@ export default function Home() {
               "ARIA standartlarına uygun",
               "Klavye navigasyonu",
               "Screen reader uyumlu",
+              "Yüksek kontrast desteği",
             ]}
           />
           <FeatureList
@@ -94,6 +159,7 @@ export default function Home() {
               "TypeScript ile yazılmış",
               "Detaylı dokümantasyon",
               "Kolay entegrasyon",
+              "Özelleştirilebilir API",
             ]}
           />
         </div>
@@ -102,7 +168,12 @@ export default function Home() {
   );
 }
 
-function FeatureCard({ title, description, preview, href }: {
+function FeatureCard({
+  title,
+  description,
+  preview,
+  href,
+}: {
   title: string;
   description: string;
   preview: React.ReactNode;
@@ -110,10 +181,10 @@ function FeatureCard({ title, description, preview, href }: {
 }) {
   return (
     <Link href={href}>
-      <div className="group p-6 rounded-xl border bg-card hover:shadow-md transition-all h-52">
+      <div className="group p-6 rounded-xl border bg-background hover:shadow-md transition-all h-full">
         <h3 className="text-lg font-semibold mb-2 text-foreground">{title}</h3>
         <p className="text-sm text-muted-foreground mb-4">{description}</p>
-        <div className="flex items-center justify-center p-4 bg-muted/40 rounded-lg">
+        <div className="flex items-center justify-center p-4 bg-muted/90 rounded-lg">
           {preview}
         </div>
       </div>
@@ -121,10 +192,7 @@ function FeatureCard({ title, description, preview, href }: {
   );
 }
 
-function FeatureList({ title, items }: {
-  title: string;
-  items: string[];
-}) {
+function FeatureList({ title, items }: { title: string; items: string[] }) {
   return (
     <div>
       <h3 className="text-lg font-semibold mb-4 text-foreground">{title}</h3>

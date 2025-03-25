@@ -66,7 +66,7 @@ export default function LoadingPage() {
           </div>
         </div>
       ),
-      code: `<div className="relative h-screen w-full">\n  <div className="absolute inset-0 flex items-center justify-center">\n    <Loading size="lg" />\n  </div>\n</div>`
+      code: `<Loading size="lg" />\n`
     }
   ];
 

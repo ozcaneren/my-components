@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "./Button";
 import { TbInputSearch } from "react-icons/tb";
 import { TbSelect } from "react-icons/tb";
-import { BsTextareaResize } from "react-icons/bs";
+import { BsCalendar, BsListNested, BsTextareaResize } from "react-icons/bs";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { BsMenuButtonWide } from "react-icons/bs";
 
@@ -37,6 +37,16 @@ const menuItems = [
     href: "/select",
     icon: <TbSelect className="w-5 h-5" />,
     label: "Select",
+  },
+  {
+    href: "/datetimepicker",
+    icon: <BsCalendar className="w-5 h-5" />,
+    label: "Date Time Picker",
+  },
+  {
+    href: "/breadcrumb",
+    icon: <BsListNested className="w-5 h-5" />,
+    label: "Breadcrumb",
   },
   {
     href: "/loading",

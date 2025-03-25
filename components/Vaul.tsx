@@ -7,7 +7,7 @@ import { FaCode } from "react-icons/fa6";
 import { cn } from "@/lib/utils";
 import { Button } from "./Button";
 import { TbInputSearch, TbSelect } from "react-icons/tb";
-import { BsTextareaResize, BsMenuButtonWide } from "react-icons/bs";
+import { BsTextareaResize, BsMenuButtonWide, BsCalendar, BsListNested } from "react-icons/bs";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { Drawer } from "vaul";
 import { VisuallyHidden } from "./VisuallyHidden";
@@ -42,6 +42,16 @@ const menuItems = [
     href: "/loading",
     icon: <AiOutlineLoading3Quarters size={16} className="animate-spin" />,
     label: "Loading"
+  },
+  {
+    href: "/datetimepicker",
+    icon: <BsCalendar size={16} />,
+    label: "Date Time Picker"
+  },
+  {
+    href: "/breadcrumb",
+    icon: <BsListNested size={16} />,
+    label: "Breadcrumb"
   }
 ];
 
