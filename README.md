@@ -65,12 +65,3 @@ Esnek ve özelleştirilebilir loading komponenti.
 ## 🛠️ Kullanım
 
 Her komponentin kendi sayfasında detaylı kullanım örnekleri ve kod parçacıkları bulunmaktadır.
-
-## 📚 Dokümantasyon
-
-Detaylı dokümantasyon için ilgili komponent sayfalarını ziyaret edin:
-- [Input](/input)
-- [Select](/select)
-- [Textarea](/textarea)
-- [Button](/button)
-- [Loading](/loading)
